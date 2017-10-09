@@ -1,0 +1,12 @@
+{% if messages %}
+{% for message in messages %}
+<p>{{message}}</p>
+{% endfor %}
+{% endif %}
+<a href='/'>Home</a>  <a href='/logout'>Logout</a>
+<h1>Create a New Wish List Item</h1>
+<form action='/create/' method='post'>
+	{% csrf_token %}
+	<p>Item/Product: <input type='text' name='name'></p>
+	<p><input type='submit' value='Add'></p>
+</form>

@@ -1,0 +1,8 @@
+<a href='/dashboard'>Home</a> <a href='/logout'>Logout</a>
+<h1>{{wish.name}}</h1>
+<p>Users who added this product/item under his/her wish list:</p>
+<ul>
+	{% for person in wishers %}
+	<li>{{person.name}}</li>
+	{% endfor %}
+</ul>
